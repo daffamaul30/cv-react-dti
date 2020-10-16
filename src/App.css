@@ -1,3 +1,405 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ededed;
+  padding-bottom: 30px;
+}
+
+.jumbotron {
+  background-color: rgb(255, 160, 122, 0.7);
+  top: 0;
+  padding: 340px;
+  padding-top: 0;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.sub {
+  border-bottom: 3px solid black;
+  width: max-content;
+  display: inline-block;
+}
+
+.menu {
+  position: sticky;
+  top: 0;
+  background-color: rgb(233, 150, 122, 0.9);
+}
+
+ul,
+#socmed {
   text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+#socmed li {
+  padding: 0;
+}
+
+ul li {
+  display: inline-block;
+}
+
+li {
+  position: relative;
+  width: auto;
+  display: block;
+  color: white;
+  padding: 25px;
+  padding-top: 20px;
+  font-size: 17px;
+  padding-bottom: 20px;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.menu li:active {
+  color: black;
+}
+
+.menu li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+  transform-origin: bottom right;
+  background-color: black;
+}
+
+.menu li:hover::after {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+  background-color: white;
+}
+
+.menu li:hover {
+  color: black;
+  transition: color 0.5s ease-in-out;
+}
+
+.profil {
+  text-align: center;
+  margin-top: -280px;
+  margin-left: 200px;
+  margin-right: 200px;
+  /* border: 1px solid lightgray; */
+}
+
+.profil .profil-banner {
+  background-color: rgb(169, 169, 169, 0.8);
+  padding: 50px 50px 50px 50px;
+  /* padding-bottom: 40px; */
+  color: white;
+  font-weight: bolder;
+  height: auto;
+  border: 1px solid lightgray;
+}
+
+#about img {
+  width: 20px;
+  padding-right: 10px;
+  vertical-align: middle;
+}
+#about div {
+  padding-bottom: 10px;
+}
+
+#name,
+#job {
+  /* margin-top: -20px; */
+  font-size: 30px;
+}
+
+#job {
+  font-size: 15px;
+}
+
+#pict {
+  text-align: center;
+}
+
+#pict img {
+  width: 25%;
+  border-radius: 100%;
+  border: 3px solid white;
+}
+
+#socmed li {
+  display: inline-block;
+  position: relative;
+}
+
+#socmed li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+  transform-origin: bottom left;
+  background-color: white;
+}
+
+#socmed li:hover::after {
+  transform: scaleX(1);
+}
+
+#socmed img {
+  display: block;
+  padding: 15px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.intro,
+.info1 {
+  display: flex;
+}
+
+.intro {
+  text-align: justify;
+  background-color: rgb(255, 255, 255, 0.8);
+  padding: 50px 50px 50px 50px;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid lightgray;
+}
+
+#about,
+#basic {
+  flex-basis: 50%;
+}
+
+#stripped {
+  border: 1px dashed #000;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+#basic {
+  margin-left: 200px;
+}
+
+#basic th {
+  width: 110px;
+}
+
+#basic table {
+  margin-left: -10px;
+}
+
+.info1 {
+  margin-top: 30px;
+}
+
+#skills,
+#education,
+#experience {
+  text-align: justify;
+  background-color: rgb(255, 255, 255, 0.8);
+  border: 1px solid lightgray;
+}
+
+#skills {
+  /* flex-basis: 45%; */
+  list-style: none;
+  width: auto;
+  display: flex;
+  position: relative;
+  background-color: transparent;
+}
+
+.bar {
+  background-color: lightgray;
+  display: block;
+  height: 5px;
+  border: 1px solid darkgray;
+  overflow: hidden;
+}
+
+.bar span {
+  height: 5px;
+  float: left;
+  background: black;
+}
+
+#html {
+  animation: html 2s;
+}
+
+#kotlin {
+  animation: kotlin 2s;
+}
+
+#java {
+  animation: java 2s;
+}
+
+#js {
+  animation: js 2s;
+}
+
+#react {
+  animation: react 2s;
+}
+
+#skills h4 {
+  text-align: end;
+}
+
+#skills table {
+  text-align: center;
+}
+
+#skills th {
+  width: 150px;
+}
+
+#last {
+  margin-left: 90px;
+  flex-basis: 55%;
+}
+
+#hard,
+#soft {
+  border: 3px solid #ededed;
+  padding: 5px 10px 20px 10px;
+  /* margin-bottom: 50px; */
+  border-radius: 4px;
+  padding-left: 30px;
+  padding-right: 30px;
+  flex-basis: 50%;
+  /* height: 100%; */
+  background-color: rgb(255, 255, 255, 0.8);
+}
+
+#hard li {
+  padding: 0;
+  color: black;
+}
+
+#soft {
+  text-align: center;
+  margin-left: 5px;
+}
+
+#hard {
+  margin-right: 5px;
+}
+
+#edu-exp {
+  display: flex;
+  flex-direction: row;
+}
+
+#education,
+#experience {
+  border: 3px solid #ededed;
+  border-radius: 4px;
+  padding: 50px 50px 50px 50px;
+  background-color: rgb(255, 255, 255, 0.8);
+}
+
+#education {
+  flex-basis: 50%;
+  margin-bottom: 10px;
+  height: auto;
+}
+
+#education div {
+  padding-bottom: 10px;
+  font-size: 15px;
+}
+
+#education img {
+  padding-bottom: 20px;
+}
+
+#education td {
+  padding-right: 20px;
+}
+
+#dot {
+  width: 30px;
+}
+
+#experience {
+  flex-basis: 50%;
+  margin-bottom: 10px;
+  height: 400px;
+}
+
+#interest {
+  /* margin-top: 20px; */
+  text-align: justify;
+  background-color: rgb(255, 255, 255, 0.8);
+  padding: 0px 30px 0px 30px;
+  border: 1px solid lightgray;
+  text-align: center;
+}
+
+#interest-grid {
+  display: inline-block;
+}
+
+#interest-grid img {
+  width: 30px;
+  padding: 25px;
+  margin-top: -10px;
+}
+
+@keyframes html {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes kotlin {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes java {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes js {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 85%;
+  }
+}
+
+@keyframes react {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
 }

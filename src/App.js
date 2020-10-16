@@ -1,13 +1,25 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import navRoutes from './config/navRoutes';
+
+import { Navigation } from './components/index';
 
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>My First Heading</h1>
-      <p>My first paragraph.</p>
-    </div>
+    <Router>
+      <Navigation />
+      <div className="jumbotron" />
+      <div className="profil">
+        <Switch>
+          {navRoutes.map((nav) => {
+            return <Route path={nav.path} component={nav.component} />;
+          })}
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
