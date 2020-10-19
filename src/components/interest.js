@@ -9,7 +9,7 @@ function Interest(props) {
       </div>
       <div id="interest-grid">
         {interests.map((x) => {
-          return <img key={x} src={x.image} alt={x.alt} />;
+          return <img key={x.alt} src={x.image} alt={x.alt} />;
         })}
       </div>
     </div>

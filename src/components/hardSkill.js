@@ -8,7 +8,7 @@ function hardSkill(props) {
       <h4 className="sub-sub">Hard Skills</h4>
       {hardSkills.map((x) => {
         return (
-          <li key={x}>
+          <li key={x.name}>
             <h5>{x.name}</h5>
             <span className="bar">
               <span id={x.id} style={{ width: x.percentage }} />

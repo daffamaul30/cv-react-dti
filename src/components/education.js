@@ -12,7 +12,7 @@ function Education(props) {
         <tbody>
           {edu.map((x) => {
           return (
-            <tr key={x}>
+            <tr key={x.school}>
               <td>
                 <img id="dot" src={Dot} alt="dot" />
               </td>

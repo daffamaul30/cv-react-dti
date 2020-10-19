@@ -20,7 +20,7 @@ function Banner(props) {
         <ul id="socmed">
           {socmed.map((x) => {
             return (
-              <li key={x}>
+              <li key={x.link}>
                 <a href={x.link}>
                   <img src={x.image} alt={x.alt} />
                 </a>

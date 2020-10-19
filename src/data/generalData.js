@@ -101,7 +101,7 @@ const datas = {
     {
       name: 'React JS',
       id: 'react',
-      percentage: '50%',
+      percentage: '60%',
     },
     {
       name: 'Java',
